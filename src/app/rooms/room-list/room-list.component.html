@@ -1,0 +1,24 @@
+
+<h2>{{ title }}</h2>
+
+<table class="table">
+    <tr>
+        <th>S.no</th>
+        <th> Room No </th>
+        <th>Room Type</th>
+        <th>Amenities</th>
+        <th>Price</th>
+        <th> Check In Time</th>
+        <th>Select Room</th>
+    </tr>
+  <tr *ngFor="let room of roomList;let i = index">
+     <td>{{ i }}</td>
+     <td>{{ room.roomNo }}</td>
+     <td>{{ room.roomType }}</td>
+     <td>{{ room.amenities }}</td>
+     <td>{{room.price}}</td>
+     <td>{{room.photos}}</td> 
+     <td>{{room.checkinTime}}</td>
+     <td> <button class="btn btn-primary" (click)="selectRoom(room)">Select</button></td>
+  </tr>
+</table>

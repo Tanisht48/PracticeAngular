@@ -1,0 +1,31 @@
+<!-- <h2>Welcome to {{ hotelName }}</h2> -->
+<app-header></app-header>
+
+<div [hidden]="hiderooms">
+    Number Of Rooms:
+ <div [innerText]="numberOfRooms"></div> <!-- propertyBininding -->
+</div>
+
+<div *ngIf="hiderooms; else noRooms"> 
+    <div>
+  
+      <app-room-list [roomList]="roomList"
+      (selectedRoom)="selectRoom($event)"
+       [title]="title"
+      ></app-room-list>
+    </div>
+  </div>
+  <ng-template #noRooms>
+    <div>
+      No Rooms
+    </div>
+  </ng-template>
+
+
+  <div>
+    <button (click)="addRoom()"> Add Room</button>
+  </div>
+  
+  
+
+<button (click)="toggle()">Toggle</button>
