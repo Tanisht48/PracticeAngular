@@ -5,6 +5,8 @@ export interface RoomList {
     price:number;
     photos:string;
     checkinTime: Date;
-   
+    checkOutTime?:Date;
+    isBooked:boolean;
+   }
 
-}
+

@@ -1,0 +1,310 @@
+{
+  "roomList": [
+    {
+      "roomNo": 1,
+      "roomType": "Standard",
+      "amenities": "WiFi, TV, Air Conditioning",
+      "price": 100,
+      "photos": "https://example.com/room1.jpg",
+      "checkinTime": "2024-04-19T14:00:00Z",
+      "checkOutTime": "",
+      "isBooked": false,
+      "id": "20ba"
+    },
+    {
+      "roomNo": 2,
+      "roomType": "Deluxe",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 150,
+      "photos": "https://example.com/room2.jpg",
+      "checkinTime": "2024-04-19T15:00:00Z",
+      "checkOutTime": "",
+      "isBooked": false,
+      "id": "d848"
+    },
+    {
+      "roomNo": 3,
+      "roomType": "Suite",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar, Jacuzzi",
+      "price": 250,
+      "photos": "https://example.com/room3.jpg",
+      "checkinTime": "2024-04-19T16:00:00Z",
+      "checkOutTime": "",
+      "isBooked": false,
+      "id": "771e"
+    },
+    {
+      "roomNo": 4,
+      "roomType": "Standard",
+      "amenities": "WiFi, TV, Air Conditioning",
+      "price": 120,
+      "photos": "https://example.com/room4.jpg",
+      "checkinTime": "2024-04-19T14:30:00Z",
+      "checkOutTime": "",
+      "isBooked": false,
+      "id": "afb5"
+    },
+    {
+      "roomNo": 5,
+      "roomType": "Deluxe",
+      "amenities": "WiFi, TV, Air Conditioning",
+      "price": 180,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-19T15:30:00Z",
+      "checkOutTime": "",
+      "isBooked": false,
+      "id": "ed38"
+    },
+    {
+      "roomNo": 6,
+      "roomType": "Deluxe",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 300,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-19T15:30:00Z",
+      "checkOutTime": "",
+      "isBooked": false,
+      "id": "4c22"
+    },
+    {
+      "id": "473c",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "isBooked": false
+    },
+    {
+      "id": "1e13",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "isBooked": false
+    },
+    {
+      "id": "8434",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "isBooked": false
+    },
+    {
+      "id": "34fa",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "isBooked": false
+    },
+    {
+      "id": "9bdb",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "isBooked": false
+    },
+    {
+      "id": "2c43",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T09:45:25.299Z",
+      "isBooked": false
+    },
+    {
+      "id": "bfab",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:32.907Z",
+      "isBooked": false
+    },
+    {
+      "id": "edcc",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:36.689Z",
+      "isBooked": false
+    },
+    {
+      "id": "05c0",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:36.853Z",
+      "isBooked": false
+    },
+    {
+      "id": "b9a4",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:37.025Z",
+      "isBooked": false
+    },
+    {
+      "id": "fe1e",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:37.190Z",
+      "isBooked": false
+    },
+    {
+      "id": "3b8f",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:37.353Z",
+      "isBooked": false
+    },
+    {
+      "id": "3c29",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:37.637Z",
+      "isBooked": false
+    },
+    {
+      "id": "2940",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:37.815Z",
+      "isBooked": false
+    },
+    {
+      "id": "8a56",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T10:52:38.043Z",
+      "isBooked": false
+    },
+    {
+      "id": "4b72",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:15:52.675Z",
+      "isBooked": false
+    },
+    {
+      "id": "5a84",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:15:53.570Z",
+      "isBooked": false
+    },
+    {
+      "id": "7dac",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:15:53.752Z",
+      "isBooked": false
+    },
+    {
+      "id": "69f9",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:15:53.961Z",
+      "isBooked": false
+    },
+    {
+      "id": "ae6b",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:15:56.305Z",
+      "isBooked": false
+    },
+    {
+      "id": "ac17",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:16:02.956Z",
+      "isBooked": false
+    },
+    {
+      "id": "6e33",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:16:03.104Z",
+      "isBooked": false
+    },
+    {
+      "id": "0e25",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:16:08.142Z",
+      "isBooked": false
+    },
+    {
+      "id": "671a",
+      "roomNo": 6,
+      "roomType": "Delux Room",
+      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
+      "price": 500,
+      "photos": "https://example.com/room5.jpg",
+      "checkinTime": "2024-04-23T11:16:22.734Z",
+      "isBooked": false
+    }
+  ]
+}

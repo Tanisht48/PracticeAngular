@@ -5,6 +5,7 @@
     Number Of Rooms:
  <div [innerText]="numberOfRooms"></div> <!-- propertyBininding -->
 </div>
+<button class="btn btn-primary" (click)="addRoom()"> Add Room</button> 
 
 <div *ngIf="hiderooms; else noRooms"> 
     <div>
@@ -21,11 +22,8 @@
     </div>
   </ng-template>
 
+    <p>{{ headerMessage }}</p>
+ 
 
-  <div>
-    <button (click)="addRoom()"> Add Room</button>
-  </div>
-  
-  
 
 <button (click)="toggle()">Toggle</button>
