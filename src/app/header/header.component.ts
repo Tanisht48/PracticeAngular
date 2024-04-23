@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Subject } from 'rxjs';
-
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 'app-header',
@@ -13,13 +13,13 @@ import { Subject } from 'rxjs';
 
 export class HeaderComponent {
    title : string = '';
-
+   
    private messageSub = new Subject<string>();
    message$ = this.messageSub.asObservable()
-
+   constructor(private logger : LoggerService ) {}
    sendMessage(){
-    console.log(11111111111111);
+   
+    this.logger?.Log('this.message$');
     this.messageSub.next('Hello From The header are u in there');
-    
-   }
+    }
 }
