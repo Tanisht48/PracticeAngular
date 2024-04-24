@@ -1,12 +1,11 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnDestroy, OnInit, SkipSelf, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnChanges, OnDestroy, OnInit, SkipSelf, ViewChild } from '@angular/core';
 import { Rooms } from './room_models/irooms';
 import { RoomList } from './room_models/iroomList';
-import { Subscription } from 'rxjs';
+import { catchError, of, Subject, Subscription,Observable } from 'rxjs';
 import { MessageService } from '../MessageService/message.service';
 
 import { RoomsService } from './Services/rooms.service';
-import { Observable } from 'rxjs';
-
+import {  } from 'rxjs';
 
 
 @Component({
@@ -15,10 +14,27 @@ import { Observable } from 'rxjs';
   styleUrl: './rooms.component.scss',
 
 })
-export class RoomsComponent implements OnInit,AfterViewInit,OnDestroy {
+export class RoomsComponent implements OnInit,AfterViewInit,OnDestroy,OnChanges {
 
   
   rooms$ = this.roomsService.getRooms$;
+  
+  error$ = new Subject<string>;
+
+  getErrors$ = this.error$.asObservable();
+   
+    room = this.roomsService.getRooms$$.pipe(
+    catchError((err) => {
+      console.log('Is It Getting Logged',err);
+      this.error$.next(err.message);
+      return of([]);
+    })
+  )
+
+
+  ngOnChanges() : void {
+ 
+  }
 
   roomList: RoomList[] = [];
   hotelName = 'Taj Hotel ';
@@ -58,6 +74,10 @@ export class RoomsComponent implements OnInit,AfterViewInit,OnDestroy {
   
  ngOnInit(): void {  
     
+  
+
+
+
     this.stream.subscribe({
       next: (value) => console.log(value),
       complete: () => console.log('complete'),

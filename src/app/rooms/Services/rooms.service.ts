@@ -16,7 +16,9 @@ export class RoomsService {
   );
 
   
-
+  getRooms$$ = this.http.get<RoomList[]>('/api/roomList/hjfbdvjkhb').pipe(
+    shareReplay(1)
+  );
 
 
   constructor(@Inject(APP_SERVICE_CONFIG) private config:AppConfig,

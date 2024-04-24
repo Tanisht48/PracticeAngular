@@ -10,6 +10,8 @@
 </div>
 <button class="btn btn-primary" (click)="addRoom()"> Add Room</button> 
 
+
+
 <div *ngIf="hiderooms; else noRooms"> 
     <div>
   
@@ -26,7 +28,7 @@
   </ng-template>
 
     <p>{{ headerMessage }}</p>
- 
+    <h1> {{ getErrors$ | async }}</h1>
 
 
 <button (click)="toggle()">Toggle</button>
