@@ -1,6 +1,9 @@
 <!-- <h2>Welcome to {{ hotelName }}</h2> -->
 <app-header></app-header>
 
+<!-- {{rooms$ | async | json}} -->
+
+
 <div [hidden]="hiderooms">
     Number Of Rooms:
  <div [innerText]="numberOfRooms"></div> <!-- propertyBininding -->
@@ -10,7 +13,7 @@
 <div *ngIf="hiderooms; else noRooms"> 
     <div>
   
-      <app-room-list [roomList]="roomList"
+      <app-room-list [roomList]="rooms$ | async"
       (selectedRoom)="selectRoom($event)"
        [title]="title"
       ></app-room-list>

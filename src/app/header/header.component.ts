@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { LoggerService } from '../logger.service';
+import { MessageService } from '../MessageService/message.service';
+import { RoomsService } from '../rooms/Services/rooms.service';
+import { HttpEventType } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-header',
@@ -11,15 +15,39 @@ import { LoggerService } from '../logger.service';
 //   providedIn: 'root'
 // })
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
    title : string = '';
+   response : JSON;
+    totalBytes:number = 0; //Where There is Nothing U cannot add anything
+    
+   constructor(private logger : LoggerService, private messageService : MessageService,private roomService: RoomsService ) {}
+  ngOnInit(): void {
+    this.roomService.getPhotos().subscribe((event) =>{
+      switch(event.type) {
+        case HttpEventType.Sent: {
+          console.log('Request Has Been made!');
+          break;
+        }
+        case HttpEventType.ResponseHeader: {
+          console.log('Request Success!');
+          break;
+        }
+        case HttpEventType.DownloadProgress: {
+          this.totalBytes += event.loaded;
+          break;
+        }
+        case HttpEventType.Response: {
+          console.log(event.body);
+        }
+      }
+      
+    })
+  }
    
-   private messageSub = new Subject<string>();
-   message$ = this.messageSub.asObservable()
-   constructor(private logger : LoggerService ) {}
+   
    sendMessage(){
-   
-    this.logger?.Log('this.message$');
-    this.messageSub.next('Hello From The header are u in there');
+      this.messageService.sendMessage('Hello From Header')
     }
+
+    
 }

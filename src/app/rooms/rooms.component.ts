@@ -1,7 +1,9 @@
-import { AfterViewChecked, AfterViewInit, Component, OnInit, SkipSelf, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnDestroy, OnInit, SkipSelf, ViewChild } from '@angular/core';
 import { Rooms } from './room_models/irooms';
 import { RoomList } from './room_models/iroomList';
-import { HeaderComponent } from '../header/header.component';
+import { Subscription } from 'rxjs';
+import { MessageService } from '../MessageService/message.service';
+
 import { RoomsService } from './Services/rooms.service';
 import { Observable } from 'rxjs';
 
@@ -13,9 +15,10 @@ import { Observable } from 'rxjs';
   styleUrl: './rooms.component.scss',
 
 })
-export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
+export class RoomsComponent implements OnInit,AfterViewInit,OnDestroy {
 
-  headerMessage: string;
+  
+  rooms$ = this.roomsService.getRooms$;
 
   roomList: RoomList[] = [];
   hotelName = 'Taj Hotel ';
@@ -37,35 +40,36 @@ export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
     //observer.error('error');
 
   })
-   @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
+   //@ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
+   headerMessage: string;
+   private messageSubscription: Subscription; 
 
-
-  constructor(private roomsService: RoomsService , ) {
-  
-    console.log('is it reaching')
+  constructor(private roomsService: RoomsService , private messageService : MessageService ) {
+    this.messageSubscription = this.messageService.message$.subscribe(message => {
+      this.headerMessage = message;
+  });
+}
+  ngOnDestroy(): void {
+    this.messageSubscription.unsubscribe();
   }
-
-
-
-  ngOnInit(): void {
-   
-    console.log(this.headerMessage);
-
+  ngAfterViewInit(): void {
+    
+  }
+  
+ ngOnInit(): void {  
+    
     this.stream.subscribe({
       next: (value) => console.log(value),
       complete: () => console.log('complete'),
       error: (err) => console.log(err)
     });
     //this.stream.subscribe((data) => console.log(data));
-    this.roomsService.getRooms().subscribe(room => {
-      console.log("Is The Data Comming", room);
-      this.roomList = room;
-    });
+    // this.roomsService.getRooms$.subscribe(room => {
+    //   console.log("Is The Data Comming", room);
+    //   this.roomList = room;
+    // });
     //this.roomList = this.roomsService.getRooms();
     //console.log(this.headerComponent);
-
-
-
   }
 
   toggle() {
@@ -95,16 +99,7 @@ export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
     })
   }
 
-  ngAfterViewInit() {
-    // this.headerComponent.title = "Room View";
-    console.log(this.headerComponent);
-    this.headerComponent.message$.subscribe(message => {
-      this.headerMessage = message;
-    });
-  }
-
-  ngAfterViewChecked(): void {
-
-  }
-
+ 
+ 
+  
 }

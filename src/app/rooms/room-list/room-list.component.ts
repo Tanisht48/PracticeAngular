@@ -8,7 +8,7 @@ import { RoomList } from '../room_models/iroomList';
   changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class RoomListComponent implements OnInit,OnChanges, OnDestroy{
- @Input()roomList : RoomList[] = [];
+ @Input()roomList : RoomList[] = [] ;
  
  @Input() title: string = '';
 
