@@ -1,7 +1,7 @@
 <!-- <h2>Welcome to {{ hotelName }}</h2> -->
 <app-header></app-header>
 
-<!-- {{rooms$ | async | json}} -->
+<!-- {{room | async | json}} -->
 
 
 <div [hidden]="hiderooms">
@@ -28,7 +28,7 @@
   </ng-template>
 
     <p>{{ headerMessage }}</p>
-    <h1> {{ getErrors$ | async }}</h1>
+    <!-- <h1> {{  getErrors$ | async }}</h1> -->
 
 
 <button (click)="toggle()">Toggle</button>

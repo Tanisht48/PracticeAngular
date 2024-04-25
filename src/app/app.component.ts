@@ -2,6 +2,7 @@ import { AfterViewInit, Component, Inject, OnInit, Optional, QueryList, ViewChil
 import { RoomsComponent } from './rooms/rooms.component';
 import { LoggerService } from './logger.service';
 import { LocalStorageToken } from './localstorage.token';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent implements OnInit,AfterViewInit{
   title = 'hotelInventory1';
 
   @ViewChild('user', { read: ViewContainerRef }) vcr!: ViewContainerRef; 
- // @ViewChildren(HeaderComponent) headerChildrenComponent: QueryList<HeaderComponent>;
+  @ViewChildren(HeaderComponent) headerChildrenComponent: QueryList<HeaderComponent>;
   
   constructor(@Optional() private loggerService: LoggerService, 
   @Inject(LocalStorageToken) private localStorage: Storage ){ 
@@ -26,8 +27,8 @@ export class AppComponent implements OnInit,AfterViewInit{
     this.localStorage.setItem('name','ANything');
   }
   ngAfterViewInit(): void {
-    const componentRef = this.vcr.createComponent(RoomsComponent);
-    componentRef.instance.numberOfRooms = 50; 
+    // const componentRef = this.vcr.createComponent(RoomsComponent);
+    // componentRef.instance.numberOfRooms = 50; 
     
     //console.log('34895389453',this.headerChildrenComponent)
   }

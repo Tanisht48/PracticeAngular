@@ -19,17 +19,19 @@ export class RoomsComponent implements OnInit,AfterViewInit,OnDestroy,OnChanges 
   
   rooms$ = this.roomsService.getRooms$;
   
-  error$ = new Subject<string>;
+ 
+ 
+  // error$ = new Subject<string>;
 
-  getErrors$ = this.error$.asObservable();
+  // getErrors$ = this.error$.asObservable();
    
-    room = this.roomsService.getRooms$$.pipe(
-    catchError((err) => {
-      console.log('Is It Getting Logged',err);
-      this.error$.next(err.message);
-      return of([]);
-    })
-  )
+  //   room = this.roomsService.getRooms$$.pipe(
+  //   catchError((err) => {
+  //     console.log('Is It Getting Logged',err);
+  //     this.error$.next(err.message);
+  //     return of([]);
+  //   })
+  // )
 
 
   ngOnChanges() : void {
