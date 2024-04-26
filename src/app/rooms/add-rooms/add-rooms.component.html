@@ -23,7 +23,7 @@
          <button [disabled]="roomForm.invalid" class="btn btn-primary" type="submit">Add room</button>
     </div>
 
-    <div *ngif = "successMessage!==''" class ="alert alert-success">
+    <div *ngIf="successMessage!==''" class ="alert alert-success">
         {{ successMessage }}
     </div>
 
