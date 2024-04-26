@@ -66,36 +66,33 @@
       "isBooked": false,
       "id": "4c22"
     },
+    
     {
-      "id": "473c",
-      "roomNo": 6,
-      "roomType": "Delux Room",
-      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
-      "price": 500,
-      "photos": "https://example.com/room5.jpg",
-      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "id": "39cb",
+      "roomNo": 7,
+      "roomType": "Normal",
+      "amenities": "WiFi, TV, Air Conditioning",
+      "price": 180,
+      "photos": "https://via.placeholder.com/600/92c952",
       "isBooked": false
     },
     {
-      "id": "1e13",
-      "roomNo": 6,
-      "roomType": "Delux Room",
-      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
-      "price": 500,
-      "photos": "https://example.com/room5.jpg",
-      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "id": "c5ee",
+      "roomNo": 8,
+      "roomType": "Delux",
+      "amenities": "WiFi, TV, Air Conditioning,Mini Bar,",
+      "price": 250,
+      "photos": "https://via.placeholder.com/600/92c952",
       "isBooked": false
     },
     {
-      "id": "8434",
-      "roomNo": 6,
-      "roomType": "Delux Room",
-      "amenities": "WiFi, TV, Air Conditioning, Mini Bar",
-      "price": 500,
-      "photos": "https://example.com/room5.jpg",
-      "checkinTime": "2024-07-19T15:30:00.000Z",
+      "id": "80df",
+      "roomNo": 10,
+      "roomType": "Suite",
+      "amenities": "WiFi, TV, Air Conditioning,Mini Bar,SeaSide view",
+      "price": 300,
+      "photos": "https://via.placeholder.com/600/92c952",
       "isBooked": false
     }
-   
   ]
 }

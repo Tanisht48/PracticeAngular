@@ -63,23 +63,22 @@ export class RoomsComponent implements OnInit,AfterViewInit,OnDestroy,OnChanges 
    private messageSubscription: Subscription; 
 
   constructor(private roomsService: RoomsService , private messageService : MessageService ) {
-    this.messageSubscription = this.messageService.message$.subscribe(message => {
-      this.headerMessage = message;
-  });
+  
 }
   ngOnDestroy(): void {
     this.messageSubscription.unsubscribe();
   }
   ngAfterViewInit(): void {
-    
+ 
   }
   
  ngOnInit(): void {  
-    
   
-
-
-
+  this.messageSubscription = this.messageService.message$.subscribe(message => {
+    console.log(message,'has The Message arrived')
+    this.headerMessage = message;
+});
+console.log(this.messageSubscription, this.headerMessage)
     this.stream.subscribe({
       next: (value) => console.log(value),
       complete: () => console.log('complete'),
@@ -103,23 +102,6 @@ export class RoomsComponent implements OnInit,AfterViewInit,OnDestroy,OnChanges 
     console.log(room);
   }
 
-  addRoom() {
-    const room: RoomList = {
-      roomNo: 6,
-      roomType: "Delux Room",
-      amenities: "WiFi, TV, Air Conditioning, Mini Bar",
-      price: 500,
-      photos: "https://example.com/room5.jpg",
-      checkinTime: new Date(Date.now()),
-      isBooked: false
-
-    }
-
-    //this.roomList.push(room);
-    this.roomsService.addRooms(room).subscribe((data) => {
-      this.roomList = [...this.roomList, data];
-    })
-  }
 
  
  

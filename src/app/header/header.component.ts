@@ -16,7 +16,7 @@ import { HttpEventType } from '@angular/common/http';
 // })
 
 export class HeaderComponent implements OnInit {
-   title : string = '';
+   title : string = "Angular Practice";
    response : JSON;
     totalBytes:number = 0; //Where There is Nothing U cannot add anything
     
@@ -46,6 +46,7 @@ export class HeaderComponent implements OnInit {
    
    
    sendMessage(){
+    console.warn('is this working')
       this.messageService.sendMessage('Hello From Header')
     }
 

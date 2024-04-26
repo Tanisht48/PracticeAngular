@@ -6,15 +6,15 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { NavigationComponent } from './navigation.component';
+import { AppNavComponent } from './app-nav.component';
 
-describe('NavigationComponent', () => {
-  let component: NavigationComponent;
-  let fixture: ComponentFixture<NavigationComponent>;
+describe('AppNavComponent', () => {
+  let component: AppNavComponent;
+  let fixture: ComponentFixture<AppNavComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [NavigationComponent],
+      declarations: [AppNavComponent],
       imports: [
         NoopAnimationsModule,
         MatButtonModule,
@@ -27,7 +27,7 @@ describe('NavigationComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavigationComponent);
+    fixture = TestBed.createComponent(AppNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

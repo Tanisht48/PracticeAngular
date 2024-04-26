@@ -1,10 +1,10 @@
 export interface RoomList {
-    roomNo:Number;
+    roomNo:number;
     roomType : string;
     amenities: string;
     price:number;
     photos:string;
-    checkinTime: Date;
+    checkinTime?: Date;
     checkOutTime?:Date;
     isBooked:boolean;
    }

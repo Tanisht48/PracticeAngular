@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Subject } from 'rxjs/internal/Subject';
 
 @Injectable({
@@ -6,7 +7,8 @@ import { Subject } from 'rxjs/internal/Subject';
 })
 export class MessageService {
   
-  private messageSub = new Subject<string>();
+  private messageSub = new BehaviorSubject<string>('');
+ 
   message$ = this.messageSub.asObservable();
 
   sendMessage(message: string) {
